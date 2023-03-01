@@ -38,3 +38,8 @@ let recurringRevenue = appPortfolio.map {$0.monthlyPrice * Double($0.users)}.red
 let nilNumbers : [Int?] = [1,nil,34,nil,4,5,6,nil]
 let nonNIlNumbers = nilNumbers.compactMap({$0})
 print(nonNIlNumbers)
+
+//flatmap
+let arrayOfArrays: [[Int]] = [[1,2,3], [3,2,4],[7,6,4]]
+let singleArray = arrayOfArrays.flatMap {$0.map{$0 * 2}}
+print(singleArray)
