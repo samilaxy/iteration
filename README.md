@@ -25,3 +25,7 @@ let filter = appPortfolio.filter {$0.monthlyPrice > 11.3 }
 //map
 let increasePrices = appPortfolio.map {$0.monthlyPrice + 2.5 }
 //print(increasePrices)
+
+//reduce
+let totalUsers = appPortfolio.reduce(0, {$0 + $1.users })
+//print(totalUsers)
