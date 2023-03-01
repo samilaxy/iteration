@@ -21,3 +21,7 @@ let appPortfolio = [IndieApp(name: "Name 1", monthlyPrice: 11.3, users: 123),
 //filter
 let filter = appPortfolio.filter {$0.monthlyPrice > 11.3 }
 //print(filter)
+
+//map
+let increasePrices = appPortfolio.map {$0.monthlyPrice + 2.5 }
+//print(increasePrices)
