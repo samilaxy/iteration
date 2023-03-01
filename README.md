@@ -33,3 +33,8 @@ let totalUsers = appPortfolio.reduce(0, {$0 + $1.users })
 //chaining
 let recurringRevenue = appPortfolio.map {$0.monthlyPrice * Double($0.users)}.reduce(0, +)
 //print(recurringRevenue)
+
+//compactmap
+let nilNumbers : [Int?] = [1,nil,34,nil,4,5,6,nil]
+let nonNIlNumbers = nilNumbers.compactMap({$0})
+print(nonNIlNumbers)
