@@ -29,3 +29,7 @@ let increasePrices = appPortfolio.map {$0.monthlyPrice + 2.5 }
 //reduce
 let totalUsers = appPortfolio.reduce(0, {$0 + $1.users })
 //print(totalUsers)
+
+//chaining
+let recurringRevenue = appPortfolio.map {$0.monthlyPrice * Double($0.users)}.reduce(0, +)
+//print(recurringRevenue)
